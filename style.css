@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hello-text {
+    position: absolute;
+    color: #00ff00;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+    text-shadow: 0 0 10px #00ff00;
+    animation: flow 8s linear infinite;
+}
+
+@keyframes flow {
+    0% {
+        transform: translate(-100px, -100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw + 100px), calc(100vh + 100px));
+        opacity: 0;
+    }
+}
+
+/* 異なる色のバリエーション */
+.hello-text.color-1 { color: #ff0080; text-shadow: 0 0 10px #ff0080; }
+.hello-text.color-2 { color: #0080ff; text-shadow: 0 0 10px #0080ff; }
+.hello-text.color-3 { color: #ff8000; text-shadow: 0 0 10px #ff8000; }
+.hello-text.color-4 { color: #80ff00; text-shadow: 0 0 10px #80ff00; }
+.hello-text.color-5 { color: #ff0040; text-shadow: 0 0 10px #ff0040; }
+
+/* 異なるサイズのバリエーション */
+.hello-text.size-small { font-size: 18px; }
+.hello-text.size-medium { font-size: 24px; }
+.hello-text.size-large { font-size: 32px; }
+.hello-text.size-xlarge { font-size: 40px; }
